@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <title>Ticket Reservation</title>
+    <style>
+        .first{
+            background: #fff;
+      padding: 20px 30px;
+      max-width: 1200px;
+      margin: auto;
+      border-radius: 10px;
+      max-height: 20PX;
+    
+    margin: 0.5%;
+    
+   
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+  
+      
+        
+            background-color:  #45a049;
+            color: white;
+            margin-top: 0%;
+        }.all{
+      font-family: Arial, sans-serif;
+      background: #f1f1f1;
+      padding: 40px;
+    }
+    .container {
+      background: #fff;
+      padding: 20px 30px;
+      max-width: 500px;
+      margin: auto;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    h2 {
+      text-align: center;
+    }
+    label {
+      display: block;
+      margin-top: 15px;
+    }
+    input, select {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+    .two {
+      margin-top: 20px;
+      width: 100%;
+      padding: 10px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #45a049;
+    }
+    .success {
+      color: green;
+      margin-top: 20px;
+      text-align: center;
+    }
+        </style>
+    </head>
+    <body>
+        <div class="first">
+        <h1><strong ><center>Ticket Reservation</center></strong></h1><div class="header">
+            
+            <div class="button-container" style="align-items: right;">
+                
+                <link><a href="#home"><button> Home</button></a>
+                <link><a href="#about us"><button> About us</button></a><link>
+                <a href="#contact"><button>Contact us</button></a><link>
+                <a href="#book"><button>Book now</button> </a>
+                 
+            </div>
+                </div>
+                </div>
+   
+<div>
+    <section id="home">
+        <div><h2><b><center><pre>Welcome to our ticket reservation webpage 
+Have a safe and happy journey </pre></center></b></h2>
+            
+            </div>
+            <p><b><center>Thanks for choosing our website to book your trip.We are glad to be a part in your trip</center></b></P>
+    </section>
+</div>
+<div>
+    <section id="about us">
+        
+
+ 
+
+  <section style="background: white; padding: 40px 20px;">
+    <div style="max-width: 800px; margin: auto;">
+      <h2 style="text-align: center; margin-bottom: 20px;">About EasyTicket</h2>
+      <p>We are a leading online platform dedicated to providing easy, fast, and secure ticket reservations for travel and events. Whether you're booking a train, flight, or tickets to a concert, we've got you covered.</p>
+      <h3 style="margin-top: 30px;">Our Mission</h3>
+      <p>Our mission is to make ticket booking a hassle-free experience for everyone, offering the best prices and customer support available in the industry.</p>
+    </div>
+  </section>
+<section id="contact"><center>
+          <h2 style="text-align: center; margin-bottom: 20px;">Contact Us</h2>
+          <p>Have any questions or need support? Get in touch with us!</p>
+    
+          <form style="display: flex; flex-direction: column; gap: 15px;width: 300px; margin-top: 20px;">
+            <label>Your Name:</label>
+            <input type="text" placeholder="Your Name" required style="padding: 10px; font-size: 16px;width: 300px;">
+    
+            <label>Your Email:</label>
+            <input type="email" placeholder="Your Email" required style="padding: 10px; font-size: 16px;width: 300px;">
+    
+            <label>Your Message:</label>
+            <textarea placeholder="Write your message here..." required style="padding: 10px; font-size: 16px;width: 300px; resize: vertical; min-height: 150px;"></textarea>
+    
+            <button type="submit" style="padding: 10px; font-size: 16px;width: 150px; background: #0077cc; color: white; border: none; cursor: pointer;">Send Message</button>
+          </form>
+    
+          <h3 style="margin-top: 30px;">Our Office</h3>
+          <p>EasyTicket Ltd.<br>123 Travel , City, Country</p>
+          <p>Email: support@easyticket.com</p>
+          <p>Phone: 1-800-123-4567</p>
+        </div></center>
+      </section>
+    
+      </section>
+
+    </section>
+</div>
+       <div><section id="book">
+        <div class="all">
+            <div class="container">
+              <h2>Ticket Reservation</h2>
+              <form id="reservationForm">
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" required />
+                <label for="from">Starting point:</label>
+                <input type="text" id="Starting point" required />
+                <label for="destination">Destination point:</label>
+                <input type="text" id="Destination" required />
+                <label for="email">Email:</label>
+                <input type="email" id="email" required />
+          
+                <label for="ticketType">Ticket Type:</label>
+                <select id="ticketType">
+                  <option value="Regular">Regular</option>
+                  <option value="VIP">VIP</option>
+                  <option value="Student">Student</option>
+                </select>
+          
+                <label for="quantity">Number of Tickets:</label>
+                <input type="number" id="quantity" min="1" value="1" required />
+          
+                <button div="two" type="submit">Reserve</button>
+              </form>
+              <div class="success" id="successMessage"></div>
+            </div>
+          </div></section>
+       </div> <script>
+        document.getElementById("reservationForm").addEventListener("submit", function(e) {
+          e.preventDefault();
+    
+          const name = document.getElementById("name").value;
+          const email = document.getElementById("email").value;
+          const ticketType = document.getElementById("ticketType").value;
+          const quantity = document.getElementById("quantity").value;
+    
+          const message = `Thank you, ${name}! You have reserved ${quantity} ${ticketType} ticket(s). Confirmation sent to ${email}.`;
+    
+          document.getElementById("successMessage").textContent = message;
+    
+          // Optionally clear form
+          this.reset();
+        });
+      </script>
+    
+    
+    </body>
+</html>
